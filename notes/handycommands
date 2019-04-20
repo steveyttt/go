@@ -1,0 +1,21 @@
+go help fmt
+go version
+go get -d github.com/GoesToEleven/go-programming
+go env
+
+##Add the go bin dir to your path so you can execute compiled code
+###############
+PATH="/Users/steventyson/Library/Python/2.7/bin:${PATH}:/Users/steventyson/Documents/goworkspace/bin"
+GOPATH="/Users/steventyson/Documents/goworkspace"
+GOBIN="/Users/steventyson/Documents/goworkspace/bin"
+export PATH
+export GOPATH
+export GOBIN
+##############
+
+go fmt (automatically formats code to the correct structure)
+go fmt ./... (format all files in a REPO)
+
+go run main.go (Run file called main.go) (Builds and runs the code)
+go build (build the code in a binary) then execute with ./binaryname
+go install main.go (convert to a binary and add to default bin)(You need to set GOBIN env var first )

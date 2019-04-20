@@ -1,0 +1,10 @@
+go path should point to your go workspace (This repo)
+#export GOPATH="/path/to/my/workspace"
+#edit the .bash_profile
+
+control flow:
+(1) - sequence
+(2) - loop; iterative
+(3) - conditional
+
+Lexical - relating to the words or vocabulary of a language.
