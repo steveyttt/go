@@ -3,7 +3,12 @@ go version
 go get -d github.com/GoesToEleven/go-programming
 go env
 
-##Add the go bin dir to your path so you can execute compiled code
+1. Install Go from website - https://golang.org/dl/
+2. Setup your go workspace:
+    - create a dir called goworkspace
+    - create 3 dirs in it (pkg, src, bin)
+    - Setup go env variables inside your ~/.bash_profile
+
 ###############
 PATH="/Users/steventyson/Library/Python/2.7/bin:${PATH}:/Users/steventyson/Documents/goworkspace/bin"
 GOPATH="/Users/steventyson/Documents/goworkspace"
