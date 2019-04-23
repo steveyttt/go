@@ -1,9 +1,14 @@
+COURSE-OUTLINE
+https://docs.google.com/document/d/1ckYpi6hcRkaBUEk975f54oGsHYHu7GhzOk7-nOrkNxo/edit
+
+COURSE RESOURCES
+https://docs.google.com/document/d/1GEDPu7_L-O4RDq3Y4dq1TMLLwvxTsWyEtP64b5kdHu4/edit
+
 https://gobyexample.com/
 https://github.com/GoesToEleven?tab=repositories
 https://github.com/GoesToEleven/GolangTraining
 https://www.amazon.com.au/Go-Action-Brian-Ketelsen/dp/1617291781/ref=asc_df_1617291781/?tag=googleshopdsk-22&linkCode=df0&hvadid=341743255824&hvpos=1o1&hvnetw=g&hvrand=3745389488649422342&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9071789&hvtargid=pla-432165719456&psc=1
 https://www.golang-book.com/
-
 
 https://golang.org/ref/spec (language spec)
 https://golang.org/doc/effective_go.html (Working examples)
@@ -13,8 +18,6 @@ https://goo.gl/PHKgO7
 
 GRIT: https://www.ted.com/talks/angela_lee_duckworth_grit_the_power_of_passion_and_perseverance?language=en
 
-COURSE-OUTLINE
-https://docs.google.com/document/d/1ckYpi6hcRkaBUEk975f54oGsHYHu7GhzOk7-nOrkNxo/edit
 
 https://play.golang.org/
 
@@ -27,3 +30,8 @@ https://forum.golangbridge.org/
 goland from jetbrains is well suited to android development (You can get a student license!!)
 
 https://gobyexample.com/variadic-functions
+
+
+
+
+

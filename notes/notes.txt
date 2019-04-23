@@ -8,3 +8,15 @@ control flow:
 (3) - conditional
 
 Lexical - relating to the words or vocabulary of a language.
+
+https://en.wikipedia.org/wiki/ASCII
+  - Here is the wiki page which explains what binary 1's and 0's make up the alphabet
+
+UTF8 is the universal standard for most coding languages.
+
+https://en.wikipedia.org/wiki/Grace_Hopper
+  - debugging origins (In the 40's bugs were found in massive computers, thats where the term debugging comes from)
+
+https://en.wikipedia.org/wiki/Moore%27s_law
+  - Founder of circuits
+
