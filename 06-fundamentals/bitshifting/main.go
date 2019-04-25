@@ -1,3 +1,7 @@
+// Bit shifting
+// https://golang.org/ref/spec#Arithmetic_operators
+// https://medium.com/learning-the-go-programming-language/bit-hacking-with-go-e0acee258827
+
 package main
 
 import "fmt"
