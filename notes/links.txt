@@ -30,6 +30,7 @@ https://forum.golangbridge.org/
 goland from jetbrains is well suited to android development (You can get a student license!!)
 
 https://gobyexample.com/variadic-functions
+... = a variadic parameter (Takes as many params as you can throw at it)
 
-
-
+https://godoc.org/builtin
+built in functions in go
