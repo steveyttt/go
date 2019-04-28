@@ -4,7 +4,7 @@
 *.dll
 *.so
 *.dylib
-
+scrap
 #Mac stuff
 .DS_store
 

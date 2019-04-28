@@ -34,3 +34,6 @@ https://gobyexample.com/variadic-functions
 
 https://godoc.org/builtin
 built in functions in go
+
+https://blog.rowanudell.com/getting-started-with-aws-sam-cli-and-golang/
+https://sahilm.com/makefiles-for-golang/
