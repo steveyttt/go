@@ -1,7 +1,7 @@
 //video 106 re-watch
 //interfaces say that if you can use these methods you are of my type (You can run)
 //this works as values can be of MULTIPLE types
-// i.e. secret agent is also of tyoe human (as they can both run speak())
+// i.e. secret agent is also of type human (as they can both run speak())
 // i.e. person is also of type human (as they can both run speak())
 //interfaces are created as a type
 
