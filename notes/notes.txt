@@ -20,3 +20,4 @@ https://en.wikipedia.org/wiki/Grace_Hopper
 https://en.wikipedia.org/wiki/Moore%27s_law
   - Founder of circuits
 
+Capitolised things in GO can be exported outside the package
