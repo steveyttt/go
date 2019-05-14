@@ -21,3 +21,8 @@ https://en.wikipedia.org/wiki/Moore%27s_law
   - Founder of circuits
 
 Capitolised things in GO can be exported outside the package
+
+concurrency is not parallelism
+
+Race condition - when read / writes to variables get screwed up because different concurrent functions try to access them at the same time
+  Look for them with this command - o run -race 20-concurrency/racecondition/main.go

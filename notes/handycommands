@@ -24,3 +24,5 @@ go fmt ./... (format all files in a REPO)
 go run main.go (Run file called main.go) (Builds and runs the code)
 go build (build the code in a binary) then execute with ./binaryname
 go install main.go (convert to a binary and add to default bin)(You need to set GOBIN env var first )
+go get ./... (Get all imports from a go file)
+
