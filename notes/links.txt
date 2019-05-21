@@ -41,3 +41,7 @@ https://sahilm.com/makefiles-for-golang/
 https://www.ardanlabs.com/blog/2015/09/composition-with-go.html
 
 https://mholt.github.io/json-to-go/
+
+https://go-proverbs.github.io/
+
+https://youtu.be/LJvEIjRBSDA
