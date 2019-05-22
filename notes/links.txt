@@ -4,6 +4,11 @@ https://docs.google.com/document/d/1ckYpi6hcRkaBUEk975f54oGsHYHu7GhzOk7-nOrkNxo/
 COURSE RESOURCES
 https://docs.google.com/document/d/1GEDPu7_L-O4RDq3Y4dq1TMLLwvxTsWyEtP64b5kdHu4/edit
 
+https://golang.org/pkg/
+https://godoc.org
+https://golang.org/doc/effective_go.html
+https://golang.org/ref/spec
+
 https://gobyexample.com/
 https://github.com/GoesToEleven?tab=repositories
 https://github.com/GoesToEleven/GolangTraining
@@ -43,5 +48,6 @@ https://www.ardanlabs.com/blog/2015/09/composition-with-go.html
 https://mholt.github.io/json-to-go/
 
 https://go-proverbs.github.io/
-
 https://youtu.be/LJvEIjRBSDA
+
+https://blog.golang.org/error-handling-and-go
