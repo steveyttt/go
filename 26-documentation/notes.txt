@@ -1,0 +1,21 @@
+cmdline doc:
+https://golang.org/doc/cmd
+https://golang.org/cmd/
+
+//gives lots of examples for how to use the doc cmdline
+go help doc
+
+go doc fmt
+go doc fmt.printf
+
+godoc -http=localhost:6060
+when you run localhost you can view documentation for your custom written packages under:
+
+
+Great example of writing clean documentation:
+https://godoc.org/errors
+
+ for big pieces of documentation you can create a doc.go.
+ Exmamples of this are here - https://golang.org/src/fmt/doc.go
+
+ https://blog.golang.org/godoc-documenting-go-code

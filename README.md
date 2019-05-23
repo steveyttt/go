@@ -59,3 +59,4 @@ erorr type
 panic
 fatal
 recover
+composite literal
