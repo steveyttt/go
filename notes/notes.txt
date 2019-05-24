@@ -26,3 +26,7 @@ concurrency is not parallelism
 
 Race condition - when read / writes to variables get screwed up because different concurrent functions try to access them at the same time
   Look for them with this command - o run -race 20-concurrency/racecondition/main.go
+
+https://www.golang-book.com/
+
+good exmples of examples are in code docs are the string package - https://godoc.org/strings#pkg-examples
