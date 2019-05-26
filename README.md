@@ -60,3 +60,5 @@ panic
 fatal
 recover
 composite literal
+testing
+coverage tests
