@@ -1,3 +1,4 @@
+//Package acdc asks if you are ready to rock
 package acdc
 
 //Sum is used to add together a potentially unlimited number of integers

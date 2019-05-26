@@ -26,3 +26,6 @@ go build (build the code in a binary) then execute with ./binaryname
 go install main.go (convert to a binary and add to default bin)(You need to set GOBIN env var first )
 go get ./... (Get all imports from a go file)
 
+//cd into the directory with the tests file then run:
+go test
+go test -v (if you want verbose info)

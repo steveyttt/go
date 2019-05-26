@@ -30,3 +30,15 @@ Race condition - when read / writes to variables get screwed up because differen
 https://www.golang-book.com/
 
 good exmples of examples are in code docs are the string package - https://godoc.org/strings#pkg-examples
+
+//import a custom package
+create a new package
+create a new func (capitol letter on func) in that package
+push it up to my repo
+go get -u github.com/steveyttt/go
+reference the repo in your code by full name (and capitalisation)
+you should see a fiel appear in your go dir’s pkg directory
+
+
+
+
