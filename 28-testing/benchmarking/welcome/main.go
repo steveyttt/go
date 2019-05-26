@@ -1,4 +1,4 @@
-package sayings
+package welcome
 
 import "fmt"
 
