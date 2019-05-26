@@ -30,4 +30,11 @@ func main() {
 		fmt.Printf("at index position %d we have hex %#x\n", i, v)
 	}
 
+	stringyy := []string{"I", "think", "youre", "really", "annoying", "so", "just", "stopit"}
+	fmt.Println(stringyy)
+
+	for _, v := range stringyy[3:] { //you can range and start from a certain point in the index
+		fmt.Println(v)
+	}
+
 }

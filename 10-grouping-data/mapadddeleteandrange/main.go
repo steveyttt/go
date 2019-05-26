@@ -44,7 +44,7 @@ func main() {
 		delete(m, "Miss Moneypenny")
 	}
 
-	//delete from a map - even if the user oesnt exist in map the delete does not fail
+	//delete from a map - even if the user desnt exist in map the delete does not fail
 	delete(m, "bob")
 	fmt.Println(m)
 

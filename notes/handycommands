@@ -36,3 +36,11 @@ golint ./...
 
 //tests and tries to find and resolve things that could actually be an error. 
 go vet ./...
+
+//run a benchmark test
+go test -bench . //tests all functions in a test package
+go test -bench bob //tests the bob function in a package
+
+go test -cover //get the test coverage % of your code
+go test -coverprofile c.out
+go tool cover -html=c.out // gives a nice visual display of what functions have proper test coverage
