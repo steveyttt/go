@@ -29,3 +29,10 @@ go get ./... (Get all imports from a go file)
 //cd into the directory with the tests file then run:
 go test
 go test -v (if you want verbose info)
+
+//test all code from current dir and down
+//lints for style
+golint ./...
+
+//tests and tries to find and resolve things that could actually be an error. 
+go vet ./...

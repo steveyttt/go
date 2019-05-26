@@ -51,3 +51,4 @@ https://go-proverbs.github.io/
 https://youtu.be/LJvEIjRBSDA
 
 https://blog.golang.org/error-handling-and-go
+https://blog.golang.org/examples
