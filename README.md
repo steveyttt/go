@@ -121,7 +121,7 @@ You can break and continue loops
 		fmt.Println(x)
 	}
 ```
-### **if ifelse else**
+### **if else if else**
 if this run this ifelse this then run this, else run this.
 ```
 	x := 42
@@ -166,11 +166,91 @@ Create a slice. slices are pointers to arrays and scale dynamically based on add
 ```
 
 ### **map**
+Used to store values, needs defined type
+```
+	//Create a map with a KEY of string and a value type of INT
+	m := map[string]int{
+		"James":           32,
+		"Miss Moneypenny": 25, //even needs a trailing , (Not like JSON)
+	}
+```
+
 ### **range**
+You can then range over a map as needed
+```
+	//print out the key value pairs of all entries in the map
+	for k, v := range m {
+		fmt.Println(k, v)
+	}
+```
+
 ### **make:**
-### **anonymous struct**
-### **embedded struct**
+make is a built in key word used to create a map, slice or channel
+```
+    x := make([]int, 10, 50)
+    ch := make(chan int)
+
+```
+
 ### **struct**
+Think of structs as a data structure (OBJECT). Can contain values of differnt types i.e. int, string. Type is defined in struct.
+
+```
+    type person struct {
+        first string
+        last  string
+        age   int
+    }
+	p1 := person{
+		first: "James",
+		last:  "Bond",
+		age:   38,
+	}
+    fmt.Println(p1)
+	fmt.Println(p1.first, p1.last, p1.age)
+```
+
+### **anonymous struct**
+Structures of data. anonymous ones dont have a name.
+```
+	p1 := struct {
+		first string
+		last  string
+		age   int
+	}{
+		first: "James",
+		last:  "Bond",
+		age:   32,
+	}
+```
+
+### **embeddedstruct**
+A struct nested into another struct
+```
+    type person struct {
+        first string
+        last  string
+        age   int
+    }
+
+    //referencing the type person inside a new type called secretAgent
+    type secretAgent struct {
+        person
+        first string
+        ltk   bool
+    }
+
+	sa1 := secretAgent{
+		person: person{
+			first: "James",
+			last:  "Bond",
+			age:   32,
+		},
+		first: "collision", // works but ugly. Best not to have double key names.
+		ltk:   true,
+	}
+```
+
 ### **anonymous func**
 ### **package**
 ### **exported package**
