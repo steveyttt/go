@@ -494,7 +494,12 @@ An expression that creates a new instance each time it is evaluated. The composi
 ```
 
 ### **testing**
-All good code needs tests. call your file ```####_test.go``` and add a test.
+All good code needs tests. call your file ```####_test.go``` and add a test. When writing tests remember to ```BET```
+```
+BENCHMARK
+EXAMPLE
+TEST
+```
 
 ### **coverage tests**
 You can check native test coverage with some handy coverage commands too.

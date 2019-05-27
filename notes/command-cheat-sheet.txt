@@ -1,0 +1,77 @@
+1. Install Go from website - https://golang.org/dl/
+2. Setup your go workspace:
+    - create a dir called goworkspace
+    - create 3 dirs in it (pkg, src, bin)
+    - Setup go env variables inside your ~/.bash_profile
+
+###############
+PATH="/Users/steventyson/Library/Python/2.7/bin:${PATH}:/Users/steventyson/Documents/goworkspace/bin"
+GOPATH="/Users/steventyson/Documents/goworkspace"
+GOBIN="/Users/steventyson/Documents/goworkspace/bin"
+export PATH
+export GOPATH
+export GOBIN
+##############
+
+//get help on a package
+go help fmt
+
+//get the version of go
+go version
+
+//get the code from the location below and add it to your GO workspace
+go get -d github.com/GoesToEleven/go-programming
+
+//display the configured go environment variables
+go env
+
+//automatically formats code to the correct structure
+go fmt
+go fmt ./...
+
+//Run file called main.go - Builds and runs the code
+go run main.go
+
+//build the code in a binary - then execute with ./binaryname
+go build
+
+//convert to a binary and add to default bin, You need to set GOBIN env var first
+go install main.go
+
+//Get all imports from a go file
+go get ./...
+
+//cd into the directory with the tests file then run:
+go test
+go test -v (if you want verbose info)
+
+//test all code from current dir and down
+//lints for style
+golint ./...
+
+//tests and tries to find and resolve things that could actually be an error. 
+go vet ./...
+
+//run a benchmark test
+//tests all functions in a test package
+go test -bench . 
+//tests the bob function in a package
+go test -bench bob
+
+//get the test coverage % of your code
+go test -cover 
+go test -coverprofile c.out
+
+// gives a nice visual display of what functions have proper test coverage
+go tool cover -html=c.out
+
+//check for race conditions
+go run -race main.go
+
+//import a custom package
+create a new package
+create a new func (capitol letter on func) in that package
+push it up to my repo
+go get -u github.com/steveyttt/go
+reference the repo in your code by full name (and capitalisation)
+you should see a file appear in your go dir’s "pkg" directory
