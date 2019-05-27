@@ -422,22 +422,79 @@ Method sets are a set of methods that you can attach to a TYPE.
 ### **atomic**
 Use the atomic pacage to write to a shared var inside a series of go routines. Try and avoid this though, stick with channels.
 
-### **channel**
-Used to manage concurrency. You can add and remove values from a channel.
-
 ### **mutex**
+```mutex``` - lock a shared variable that all go routines will use. It's like checking a book out in a library, once someone has it they need to return it to allow someone else to check it out.
+```
+    var mu sync.Mutex
+	for i := 0; i < gs; i++ {
+		go func() {
+			mu.Lock() //this locks all variables accessed inside the go routine
+			v := counter
+			runtime.Gosched() //releases the running routine to start the next (Not necessarily needed, but handy to know)
+			v++
+			counter = v
+			mu.Unlock() //this unlocks variables accessed inside the go routine
+			wg.Done()
+		}()
+		fmt.Println("Number of go routines", runtime.NumGoroutine())
+
+	}
+```
 ### **racecondition**
+This is a series of GO routines fighting over a shared variable
+
 ### **waitgroup**
+You can use a ```WaitGroup``` to block parts of your code from running. You can trigger 20 concurrent functions to run and then use a waitgroup to hold running the rest of your code until all concurrent functions have confirmed they have finished. They do this by updating a waitgroup.
+
 ### **channels**
+Used to manage concurrency. You can add and remove values from a channel. Make a channel with ```ch := make(chan int)```. YOU CAN ONLY USE CHANNEL IN THEIR OWN go routine.
+CHANNELS BLOCK... Think of it like a relay race, they only work when handing a baton over.
+```
+    ch <- 55 //put the number 55 on a channel
+    fmt.Println(<-ch) //take the number 55 off the channel
+```
+
 ### **comma ok idiom**
+Explained in an OK way [here](https://golang.org/doc/effective_go.html#maps)
+
 ### **directional channel**
+Channels can lock data to only be sending or receiving channel.
+```
+	c := make(chan int)
+	cr := make(<-chan int) //receive only channel
+	cs := make(chan<- int) //send only channel
+```
+
 ### **fan-in**
+Fan from multiple channels into one channel.
+
 ### **fan-out**
+Fan from one channel to mutliple channels.
+
 ### **select channel**
-### **erorr type**
+A select statement to perform a different task based upon which channel a message is received.
+
 ### **panic**
+Panic error - shits gotten weird, run defered functions and then try to exit UNLESS recover error is specified. Defered functions run in the order of last in first out when panicking.
+
 ### **fatal**
+Fatal error - it's dead stop immediately and exit.
+
 ### **recover**
+Recover error - can recover a PANIC scenario, not always a good idea though. You can only run recover inside a defered function
+
 ### **composite literal**
+An expression that creates a new instance each time it is evaluated. The composite literal below starts from the person keyword.
+```
+	p1 := person{
+		first: "James",
+		last:  "Bond",
+		age:   38,
+	}
+```
+
 ### **testing**
+All good code needs tests. call your file ```####_test.go``` and add a test.
+
 ### **coverage tests**
+You can check native test coverage with some handy coverage commands too.
