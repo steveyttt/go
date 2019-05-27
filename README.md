@@ -1,8 +1,12 @@
-# go dumping ground for my tutorials
+#A Repo to host all github basics
 
-##What is:
+The Repo is built based upon lessons provided by Todd Mcleod - https://www.udemy.com/course/learn-how-to-code/. It can be used as a cheat sheet for most common coding scenarios which can be done with the golang standard lib.
 
-var:
+###**var**
+```var``` can be used to create local & package wide variables. 
+
+```var z int = 10```
+
 type:
 bitshifting:
 bool:
