@@ -5,13 +5,19 @@ The Repo is built based upon lessons provided by Todd Mcleod - https://www.udemy
 ### **var**
 ```var``` can be used to create local & package wide variables. 
 
-```var z int = 10```
+```
+var z int = 10
+```
 
 ### **type**
-GO is all about TYPE! Type can be set when declaring vars, you can configure functions to only allow parameters which are of a specific type. You can create new custom types, you can create custom types based upon pre-existig types:
+GO is all about TYPE! Type can be set when declaring vars, you can configure functions to only allow parameters which are of a specific type. You can create new custom types, you can create custom types based upon pre-existig types too.
 
 ```
 type hotdog int
+
+var a int
+var b hotdog
+a = int(b) //convert b from hotdog to a int
 ```
 
 ### **bitshifting**
