@@ -19,13 +19,13 @@ GO is all about ```TYPE``` Type can be set when declaring vars, you can configur
 ```
 
 ### **bitshifting**
-Shift the bits of a binary number left
+Shift the bits of a binary number left.
 
 ### **bool**
-Bool is bool true or false
+Bool is bool :) ```true``` or ```false```
 
 ### **constant**
-Like vars but once defined cannot change
+Like vars but once defined cannot change.
 ```
     const a = 42
 ```
@@ -37,7 +37,7 @@ Ints are numbers.
     //uint can only be positive
     //byte = uint8 (0-255)
     //rune = int32 (-2147483648 to 2147483647)
-    // the number at the after int and uint dictates the number of bytes to assign the variable
+    //the number  after int and uint dictates the number of bytes to assign the variable
     var x int
     var y float64
     var z int8 = 127   // int 8 can go up to 127, if you set this to 128 it will fail
@@ -48,26 +48,26 @@ Ints are numbers.
 ```iota``` is a simple way to incrememt a number.
 
 ### **modulus**
-defined as ```%``` used to divide numbers and provide the remainder
+defined as ```%``` and is used to divide numbers and provide the remainder.
 ```
     y := 83 % 40 //83 goes into 40 twice and leaves a remainder of 3
 ```
 
 ### **runtime**
-Simple package to provide system specific stats at runtime
+Simple package to provide system specific stats at runtime.
 ```
     fmt.Println(runtime.GOOS)
 ```
 
 ### **string**
-wrap them in ```"" or '' ```. You can do multi line ones too
+wrap them in ```"" or '' ```. You can do multi line ones too.
 ```
     s := `"Hello,
         SteveyT"`
 ```
 
 ### **conditional**
-you can use ```bool``` to set conditionals in code
+you can use ```bool``` to set conditionals in code.
 ```
     fmt.Println(true && true)  //true AND true make true
     fmt.Println(true && false) //true AND false together make false - both need to be true
@@ -78,7 +78,7 @@ you can use ```bool``` to set conditionals in code
 ```
 
 ### **forloop**
-loop over values and re-run code... INIT CONDITION POST
+loop over values and re-run code... INIT CONDITION POST.....
 ```
 	//https://golang.org/ref/spec#IncDec_statements
 	//for statement with for clause
@@ -135,7 +135,7 @@ if this run this ifelse this then run this, else run this.
 ```
 
 ### **switch**
-switch evaluates a conditional statement and executes on first match only if you add the FALLTHROUGH keyword it will allow all other matching case statements below to also execute avoid FALLTHROUGH though - it drops wonky logic everywhere.
+switch evaluates a conditional statement and executes on first match only. If you add the FALLTHROUGH keyword it will allow all other matching case statements below to also execute avoid FALLTHROUGH though - it drops wonky logic everywhere.
 ```
 	switch {
 	case false:
@@ -153,7 +153,7 @@ switch evaluates a conditional statement and executes on first match only if you
 ```
 
 ### **array**
-Make an array - create an array of maximum 50 ints and creates a slice structure with a length of 10 (Length and capacity) - this allows the slice to grow by 40 more values until the arra needs to expand
+You ```make``` an array - create an array of maximum 50 ints and creates a slice structure with a length of 10 (Length and capacity) - this allows the slice to grow by 40 more values until the arra needs to expand
 ```
 	x := make([]int, 10, 50)
 ```
@@ -165,7 +165,7 @@ Create a slice. slices are pointers to arrays and scale dynamically based on add
 ```
 
 ### **map**
-Used to store values, needs defined type
+Used to store values, needs type specifying when defining.
 ```
 	//Create a map with a KEY of string and a value type of INT
 	m := map[string]int{
@@ -286,7 +286,7 @@ a set of code you can invoke as needed.
 
 ```
 
-### **anonymous function***
+### **anonymous function**
 A function with no name.
 ```
 	func() {
@@ -312,7 +312,7 @@ Interfaces say that if you can use these methods you are of my type. This works 
 ```
 
 ### **polymorphism**
-Polymorphism is when a function which can take multiple types as parameters. A secret agent and a person perhaps?
+Polymorphism is when a function can take multiple types as parameters. A secret agent and a person perhaps?
 
 ### **methods**
 A method is a function which belongs to a certain type.
@@ -327,7 +327,7 @@ A method is a function which belongs to a certain type.
 This is a func which returns a func
 
 ### **unfurling & variadic functions / parameters**
-Variadic parameters are functions which take many parameters. Unfurling and furling is the process of converting a slice of ints into individual ints. These are used with variadic functions which are functions that can take an unlimited number of values.
+Variadic functions are functions which take many parameters. Unfurling and furling is the process of converting a slice of values into individual values which can be ranged over. These are used with variadic functions which are functions that can take an unlimited number of values.
 ```
     xi := []int{2, 3, 4, 5, 6, 7, 8, 9}
     sum(xi...) //unfurl the slice before using (apply the numbers and not the slice)
@@ -420,7 +420,7 @@ Method sets are a set of methods that you can attach to a TYPE.
 ```
 
 ### **atomic**
-Use the atomic pacage to write to a shared var inside a series of go routines. Try and avoid this though, stick with channels.
+Use the atomic package to write to a shared var inside a series of go routines. Try and avoid this though, stick with channels.
 
 ### **mutex**
 ```mutex``` - lock a shared variable that all go routines will use. It's like checking a book out in a library, once someone has it they need to return it to allow someone else to check it out.
@@ -447,7 +447,7 @@ This is a series of GO routines fighting over a shared variable
 You can use a ```WaitGroup``` to block parts of your code from running. You can trigger 20 concurrent functions to run and then use a waitgroup to hold running the rest of your code until all concurrent functions have confirmed they have finished. They do this by updating a waitgroup.
 
 ### **channels**
-Used to manage concurrency. You can add and remove values from a channel. Make a channel with ```ch := make(chan int)```. YOU CAN ONLY USE CHANNEL IN THEIR OWN go routine.
+Used to manage concurrency. You can add and remove values from a channel. Make a channel with ```ch := make(chan int)```. YOU CAN ONLY USE CHANNELS IN THEIR OWN go routine.
 CHANNELS BLOCK... Think of it like a relay race, they only work when handing a baton over.
 ```
     ch <- 55 //put the number 55 on a channel
