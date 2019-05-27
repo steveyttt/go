@@ -121,7 +121,7 @@ You can break and continue loops
 		fmt.Println(x)
 	}
 ```
-### **if else if else**
+### **if, else if, else**
 if this run this ifelse this then run this, else run this.
 ```
 	x := 42
@@ -156,7 +156,6 @@ switch evaluates a conditional statement and executes on first match only if you
 Make an array - create an array of maximum 50 ints and creates a slice structure with a length of 10 (Length and capacity) - this allows the slice to grow by 40 more values until the arra needs to expand
 ```
 	x := make([]int, 10, 50)
-
 ```
 
 ### **slice**
@@ -223,7 +222,7 @@ Structures of data. anonymous ones dont have a name.
 	}
 ```
 
-### **embeddedstruct**
+### **embedded struct**
 A struct nested into another struct
 ```
     type person struct {
@@ -287,6 +286,14 @@ a set of code you can invoke as needed.
 
 ```
 
+### **anonymous function***
+A function with no name.
+```
+	func() {
+		fmt.Println("You are anonymous")
+	}()
+```
+
 ### **func expression**
 Store a function as an expression.
 ```
@@ -316,19 +323,108 @@ A method is a function which belongs to a certain type.
     }
 ```
 
-### **returnedfunc**
+### **returned func**
+This is a func which returns a func
 
+### **unfurling & variadic functions / parameters**
+Variadic parameters are functions which take many parameters. Unfurling and furling is the process of converting a slice of ints into individual ints. These are used with variadic functions which are functions that can take an unlimited number of values.
+```
+    xi := []int{2, 3, 4, 5, 6, 7, 8, 9}
+    sum(xi...) //unfurl the slice before using (apply the numbers and not the slice)
 
-### **unfurling**
-### **variadic function / parameter**
+    func sum(x ...int) int {
+    sum := 0
+	for i, v := range x {
+		sum += v
+		fmt.Println("For item in index position", i, "we are now adding", v, "to the total", sum)
+	}
+	return sum
+
+```
+
 ### **pointer address**
+A pointer address is an address to a value in memory. The ADDRESS not the value. It is referenced as ```&```
+```
+    fmt.Println(&a) //This is the value A's address in memory (Not the value, just the address)
+
+```
+
 ### **pointer value**
+A pointer value is the value stored in the ADDRESS memory. It is referenced as ```*```. A POINTER receiver only works with values that are POINTERS. A NON-POINTER receiver works with values that are POINTERS and NON-POINTERS.
+```
+	a := 42
+	fmt.Println(a)
+	fmt.Println(&a) //This is the value A's address in memory (Not the value, just the address)
+
+	fmt.Printf("%T\n", a)  //This will show as an int
+	fmt.Printf("%T\n", &a) //This will show as *int (A pointer to an int) //*int is it's own type and NOT an int
+
+	b := &a
+	fmt.Println(b)   //will show the address of a
+	fmt.Println(*b)  //will show the value in the address (a pointer)
+	fmt.Println(*&b) //will show 42
+
+	*b = 43        //set the value in that memory address to be 43
+	fmt.Println(a) //query the in-memory space, it should now be 43
+```
+
 ### **methodsets**
+Method sets are a set of methods that you can attach to a TYPE.
+
 ### **bcrypt**
+```bcrypt``` is used to hash credentials used during web requests.
+
 ### **marshall**
+```marshall``` can be used to convert a struct to valid JSON.
+```
+	p1 := person{
+		First: "James",
+		Last:  "Bond",
+		Age:   32,
+	}
+
+	p2 := person{
+		First: "Miss",
+		Last:  "MoneyPenny",
+		Age:   27,
+	}
+
+	people := []person{p1, p2}
+
+	fmt.Println(people)
+
+	bs, err := json.Marshal(people)
+	if err != nil {
+		log.Fatal(err)
+	}
+```
+
 ### **unmarshall**
+```unmarshal``` can be used to convert a slice of bytes into a struct.
+```
+    type person struct {
+        First string `json:"First"`
+        Last  string `json:"Last"`
+        Age   int    `json:"Age"`
+    }
+
+	s1 := `[{"First":"James","Last":"Bond","Age":32},{"First":"Miss","Last":"MoneyPenny","Age":27}]`
+	bs := []byte(s1)
+
+	people := []person{}
+
+	err := json.Unmarshal(bs, &people)
+	if err != nil {
+		fmt.Println(err)
+	}
+```
+
 ### **atomic**
+Use the atomic pacage to write to a shared var inside a series of go routines. Try and avoid this though, stick with channels.
+
 ### **channel**
+Used to manage concurrency. You can add and remove values from a channel.
+
 ### **mutex**
 ### **racecondition**
 ### **waitgroup**
