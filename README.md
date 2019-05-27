@@ -1,4 +1,4 @@
-# A Repo to host all github basics
+# A Repo to host all golang basics
 
 The Repo is built based upon lessons provided by Todd Mcleod - https://www.udemy.com/course/learn-how-to-code/. It can be used as a cheat sheet for most common coding scenarios which can be done with the golang standard lib.
 
@@ -7,10 +7,17 @@ The Repo is built based upon lessons provided by Todd Mcleod - https://www.udemy
 
 ```var z int = 10```
 
+### **type**
+GO is all about TYPE! Type can be set when declaring vars, you can configure functions to only allow parameters which are of a specific type. You can create new custom types, you can create custom types based upon pre-existig types:
+
+```
+type hotdog int
+```
+
+### **bitshifting**
 
 
-type:
-bitshifting:
+
 bool:
 constant (Why not var):
 int (and all the types of it)(float / int):
