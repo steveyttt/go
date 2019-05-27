@@ -78,12 +78,93 @@ you can use ```bool``` to set conditionals in code
 ```
 
 ### **forloop**
-### **if ifelse**
+loop over values and re-run code... INIT CONDITION POST
+```
+	//https://golang.org/ref/spec#IncDec_statements
+	//for statement with for clause
+	for i := 0; i <= 10; i++ {
+		fmt.Println(i)
+```
+
 ### **loop**
+Loops dont need to have conditions.
+```
+	//while x is less than true run
+	//for statement with single condition
+	for x < 10 {
+		fmt.Println(x)
+		x++
+	}
+
+	for {
+		//if y is greater than 9 break from the for loop
+		if y > 9 {
+			break
+		}
+
+		fmt.Println(y)
+		y++
+	}
+```
+
+You can break and continue loops
+```
+	x := 1
+	for {
+		x++
+		if x > 100 {
+			break
+		}
+		if x%2 != 0 {
+			continue //If x divided by 2 has a remainder then continue to next loop
+		}
+		fmt.Println(x)
+	}
+```
+### **if ifelse else**
+if this run this ifelse this then run this, else run this.
+```
+	x := 42
+	if x == 40 {
+		fmt.Println("our value was 40")
+	} else if x == 41 {
+		fmt.Println("our value was 41")
+	} else {
+		fmt.Println("our value was", x)
+	}
+```
+
 ### **switch**
-### **fallthrough**
-### **slice**
+switch evaluates a conditional statement and executes on first match only if you add the FALLTHROUGH keyword it will allow all other matching case statements below to also execute avoid FALLTHROUGH though - it drops wonky logic everywhere.
+```
+	switch {
+	case false:
+		fmt.Println("This should not print")
+	case (2 == 4):
+		fmt.Println("This should not print2")
+	case (3 == 3):
+		fmt.Println("This should print cos 3 == 3")
+		fallthrough
+	case (4 == 4):
+		fmt.Println("This should now print")
+	default: // executed if no statements match
+		fmt.Println("This is default") //if nothing matches run the DEFAULT
+	}
+```
+
 ### **array**
+Make an array - create an array of maximum 50 ints and creates a slice structure with a length of 10 (Length and capacity) - this allows the slice to grow by 40 more values until the arra needs to expand
+```
+	x := make([]int, 10, 50)
+
+```
+
+### **slice**
+Create a slice. slices are pointers to arrays and scale dynamically based on added values
+```
+    x := []int{4, 5, 7, 8, 42}
+```
+
 ### **map**
 ### **range**
 ### **make:**
