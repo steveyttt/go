@@ -171,12 +171,12 @@ Used to store values, needs defined type
 	//Create a map with a KEY of string and a value type of INT
 	m := map[string]int{
 		"James":           32,
-		"Miss Moneypenny": 25, //even needs a trailing , (Not like JSON)
+		"Miss Moneypenny": 25,
 	}
 ```
 
 ### **range**
-You can then range over a map as needed
+You can range over a map as needed. You can range over lots of things.
 ```
 	//print out the key value pairs of all entries in the map
 	for k, v := range m {
@@ -184,12 +184,11 @@ You can then range over a map as needed
 	}
 ```
 
-### **make:**
+### **make**
 make is a built in key word used to create a map, slice or channel
 ```
     x := make([]int, 10, 50)
     ch := make(chan int)
-
 ```
 
 ### **struct**
@@ -251,16 +250,75 @@ A struct nested into another struct
 	}
 ```
 
-### **anonymous func**
 ### **package**
+All code can be broken into packages, you can import packages using the ```import``` keyword
+
 ### **exported package**
+Exported packages need capitol first letters to be accessible by other packages. For example function ```Sum()``` is exported but ```sum()``` is not.
+
 ### **callback**
+passing a func as an argument
+
 ### **defer**
+```defer``` is used to "defer" certain calls until the function exits. IE if you open a file in a function you can defer closing it until the function closes.
+```
+    func main() {
+        defer foo() //foo will run after bar as it has been deferd to run at function exit
+        bar()
+}
+``` 
+
+### **function**
+a set of code you can invoke as needed.  
+```
+    //func (r receiver) identifier (parameters) (return (s)) {function code}
+
+    //basic function
+    func foo() {
+        fmt.Println("hello there matey moo")
+    }
+
+    //func mouse takes 2 string arguments and returns a string and a bool
+    func mouse(fn string, ln string) (string, bool) {
+        a := fmt.Sprint(fn, " ", ln, `, says "hello"`)
+        b := false
+        return a, b
+    }
+
+```
+
 ### **func expression**
+Store a function as an expression.
+```
+	f := func() {
+		fmt.Println("my first func expression")
+	}
+```
+
 ### **interfaces**
+Interfaces say that if you can use these methods you are of my type. This works as values can be of MULTIPLE types.
+```
+    //an interface says hey baby if you can run method speak, youre my TYPE :)
+    type human interface {
+        speak()
+    }
+```
+
 ### **polymorphism**
+Polymorphism is when a function which can take multiple types as parameters. A secret agent and a person perhaps?
+
 ### **methods**
+A method is a function which belongs to a certain type.
+```
+    // method speak can only be called from type secretAgent
+    func (s secretAgent) speak() {
+        fmt.Println("I am", s.first, s.last)
+    }
+```
+
 ### **returnedfunc**
+
+
 ### **unfurling**
 ### **variadic function / parameter**
 ### **pointer address**
