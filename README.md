@@ -60,6 +60,7 @@ fmt.Println(runtime.GOOS)
 ```
 
 ### **string**
+wrap them in ```"" or '' or \`\`\` ```
 ### **conditional**
 ### **forloop**
 ### **if ifelse**
