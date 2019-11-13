@@ -52,3 +52,6 @@ https://blog.golang.org/examples
 
 GO FRAMEWORKS
 https://github.com/avelino/awesome-go
+
+AWS SDK EXAMPLES
+https://github.com/awsdocs/aws-doc-sdk-examples/tree/master/go
