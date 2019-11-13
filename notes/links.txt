@@ -49,3 +49,6 @@ https://blog.golang.org/error-handling-and-go
 
 CREATING EXAMPLES
 https://blog.golang.org/examples
+
+GO FRAMEWORKS
+https://github.com/avelino/awesome-go
