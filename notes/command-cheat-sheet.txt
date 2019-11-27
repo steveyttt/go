@@ -4,6 +4,8 @@
     - create 3 dirs in it (pkg, src, bin)
     - Setup go env variables inside your ~/.bash_profile
 
+Setting the GoPath: https://github.com/golang/go/wiki/SettingGOPATH
+
 ###############
 PATH="/Users/steventyson/Library/Python/2.7/bin:${PATH}:/Users/steventyson/Documents/goworkspace/bin"
 GOPATH="/Users/steventyson/Documents/goworkspace"
